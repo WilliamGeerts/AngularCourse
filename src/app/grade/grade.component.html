@@ -1,0 +1,38 @@
+<h2>Grade est ok</h2>
+<div>
+  <p>Ma note est de <span>{{myGrade}}</span></p>
+</div>
+
+<div [innerHTML]="firstHtml">
+
+</div>
+
+
+<div [ngClass]="{'red-text': red}">
+  {{textToChange}}
+
+</div>
+
+<input type="text" [value]="firstHtml">
+
+<button (click)="alertMe()">
+  Clique !!!!
+</button>
+
+<button (click)="inverserRouge()">Inverser rouge</button>
+
+<input type="text" [(ngModel)]="textToChange">
+
+<ul>
+  <li *ngFor="let num of numbers; let i = index; let even = even;let first = first; let odd = odd;">
+    <span [ngClass]="{'red-text': even && first}" *ngIf="even">
+    {{i}} ({{even}})-{{num}}</span>
+
+
+
+  </li>
+
+  <button (click)="nombreAlea()">Ajouter un nombre alea</button>
+
+
+</ul>

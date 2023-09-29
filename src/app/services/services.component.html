@@ -1,0 +1,11 @@
+<button (click)="increment()">Increment the number</button>
+
+<app-child1></app-child1>
+<app-child2></app-child2>
+
+<ul>
+
+  <li *ngFor="let user of users">
+    {{user.pseudo}} {{user.mail}}
+  </li>
+</ul>

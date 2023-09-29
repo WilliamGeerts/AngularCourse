@@ -1,0 +1,17 @@
+<form [formGroup]="form" (submit)="log()">
+
+  <label>
+    Name : <input type="text" formControlName="name">
+  </label>
+
+  <div *ngIf="controlName.dirty && controlName.invalid && controlName .touched">
+    Name control is invalid
+  </div>
+
+  <label>
+    Grade : <input type="number" formControlName="grade" >
+  </label>
+
+  <input type="submit" [disabled]="form.invalid">
+
+</form>

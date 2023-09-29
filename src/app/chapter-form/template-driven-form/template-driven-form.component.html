@@ -1,0 +1,23 @@
+<h2>Template driven form</h2>
+
+<form (submit)="log()" #formElement="ngForm">
+  <label>
+    Name : <input type="text" [(ngModel)]="userData.name"
+                  name="name" required #inputElementName="ngModel">
+  </label>
+
+  <div *ngIf="inputElementName.invalid && inputElementName.dirty">
+    Attention il faut compléter le nom
+  </div>
+  <label>
+    Grade : <input type="number" [(ngModel)]="userData.grade"
+                   name="garde" required>
+  </label>
+
+  <input type="submit" [disabled]="formElement.invalid">
+</form>
+
+<!--touched - untouched
+pristine - dirty
+valid - invalid-->
+
