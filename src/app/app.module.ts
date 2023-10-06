@@ -10,6 +10,16 @@ import { ReactiveFormComponent } from './chapter-form/reactive-form/reactive-for
 import { ServicesComponent } from './services/services.component';
 import { Child1Component } from './services/child1/child1.component';
 import { Child2Component } from './services/child2/child2.component';
+import { CommunicationComponent } from './communication/communication.component';
+import { ExampleInputComponent } from './communication/example-input/example-input.component';
+import { ExampleOutputComponent } from './communication/example-output/example-output.component';
+import { ExampleTwoWayBindingComponent } from './communication/example-two-way-binding/example-two-way-binding.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { LengthStrPipe } from './pipes/length-str.pipe';
+import { JsonFilterPipe } from './pipes/json-filter.pipe';
+import {AppRoutingModule} from "./app-routing.module";
+import { IndexComponent } from './index/index.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +30,22 @@ import { Child2Component } from './services/child2/child2.component';
     ReactiveFormComponent,
     ServicesComponent,
     Child1Component,
-    Child2Component
+    Child2Component,
+    CommunicationComponent,
+    ExampleInputComponent,
+    ExampleOutputComponent,
+    ExampleTwoWayBindingComponent,
+    PipesComponent,
+    LengthStrPipe,
+    JsonFilterPipe,
+    IndexComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

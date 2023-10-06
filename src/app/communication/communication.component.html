@@ -1,0 +1,13 @@
+<div>
+  <h1>Input</h1>
+  <app-example-input [users]="users"></app-example-input>
+</div>
+<div>
+  <h1>Output</h1>
+  <app-example-output (mailCreated)="alertMail($event)"></app-example-output>
+</div>
+<div>
+  <h1>Two Way Binding</h1>
+  <app-example-two-way-binding [(size)]="size"></app-example-two-way-binding>
+  <h2 [style.font-size.px]="size"s>Woaaaaaaaaaaaaaa</h2>
+</div>
